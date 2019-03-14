@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GamePAD"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/buttonAbajo"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/gradient_background_butons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDerecha"
+        app:layout_constraintStart_toEndOf="@+id/buttonIzquierda" />
+
+    <Button
+        android:id="@+id/buttonArriba"
+        android:layout_width="92dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginStart="134dp"
+        android:background="@drawable/gradient_background_butons"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAbajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDerecha"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/gradient_background_butons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAbajo" />
+
+    <Button
+        android:id="@+id/buttonIzquierda"
+        android:layout_width="92dp"
+        android:layout_height="93dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/gradient_background_butons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAbajo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="49dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
