@@ -20,7 +20,69 @@ public class GamePAD extends AppCompatActivity {
         babajo= findViewById(R.id.buttonAbajo);
         bderecha= findViewById(R.id.buttonDerecha);
         bizquierda= findViewById(R.id.buttonIzquierda);
+        
+       barriba.setOnTouchListener(new View.OnTouchListener() {  
+        @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    barriba.setBackgroundColor(Color.BLUE);
+                }
+                if(event.getAction() == MotionEvent.ACTION_UP){
+                    barriba.setBackgroundColor(Color.RED);
+                }
+                return true;
+            }
 
+        });
+}
+    
+     babajo.setOnTouchListener(new View.OnTouchListener() {  
+        @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    babajo.setBackgroundColor(Color.BLUE);
+                }
+                if(event.getAction() == MotionEvent.ACTION_UP){
+                    abajo.setBackgroundColor(Color.RED);
+                }
+                return true;
+            }
+
+        });
+}
+
+ bderecha.setOnTouchListener(new View.OnTouchListener() {  
+        @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    bderecha.setBackgroundColor(Color.BLUE);
+                }
+                if(event.getAction() == MotionEvent.ACTION_UP){
+                    bderecha.setBackgroundColor(Color.RED);
+                }
+                return true;
+            }
+
+        });
+}
+
+ bizquierda.setOnTouchListener(new View.OnTouchListener() {  
+        @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    bizquierda.setBackgroundColor(Color.BLUE);
+                }
+                if(event.getAction() == MotionEvent.ACTION_UP){
+                    bizquierda.setBackgroundColor(Color.RED);
+                }
+                return true;
+            }
+
+        });
+}
+
+    /*
+    
         barriba.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -37,30 +99,7 @@ public class GamePAD extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-    public void onTouchAbajo(View v, MotionEvent event) {
-        if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS){
-            babajo.setBackgroundColor(Color.BLUE);
-        }
-
-    }
-    public void onTouchDerecha(View v, MotionEvent event) {
-        if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS){
-            bderecha.setBackgroundColor(Color.BLUE);
-        }
-
-    }
-    public void onTouchIzquerda(View v, MotionEvent event) {
-        if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS){
-            bizquierda.setBackgroundColor(Color.BLUE);
-        }
-
-    }
-
-
-
+    
+    */
 
 }
