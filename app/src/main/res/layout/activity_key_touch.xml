@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".KeyTouch">
 
+    <ImageView
+        android:id="@+id/Arriba"
+        android:layout_width="162dp"
+        android:layout_height="187dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/up" />
+
+    <ImageView
+        android:id="@+id/Abajo"
+        android:layout_width="184dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginStart="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/down" />
+
+    <TextView
+        android:id="@+id/volumen"
+        android:layout_width="306dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Pulsa el boton de volumen"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Abajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Arriba" />
+
 </android.support.constraint.ConstraintLayout>
