@@ -25,20 +25,6 @@ public class KeyTouch extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if(keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            texto.setVisibility(View.INVISIBLE);
-            arriba.setVisibility(View.INVISIBLE);
-            abajo.setVisibility(View.VISIBLE);
-            // Codi de baixar volum
-            return true;
-
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -48,6 +34,15 @@ public class KeyTouch extends AppCompatActivity {
             arriba.setVisibility(View.VISIBLE);
             abajo.setVisibility(View.INVISIBLE);
             // Codi de pujar volum
+            return true;
+
+        }
+
+        if(keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
+            texto.setVisibility(View.INVISIBLE);
+            arriba.setVisibility(View.INVISIBLE);
+            abajo.setVisibility(View.VISIBLE);
+            // Codi de baixar volum
             return true;
 
         }

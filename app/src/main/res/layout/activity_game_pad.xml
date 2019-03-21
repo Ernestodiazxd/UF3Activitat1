@@ -7,49 +7,6 @@
     tools:context=".GamePAD"
     tools:layout_editor_absoluteY="25dp">
 
-    <Button
-        android:id="@+id/buttonAbajo"
-        android:layout_width="92dp"
-        android:layout_height="93dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDerecha"
-        app:layout_constraintStart_toEndOf="@+id/buttonIzquierda" />
-
-    <Button
-        android:id="@+id/buttonArriba"
-        android:layout_width="92dp"
-        android:layout_height="95dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginStart="134dp"
-        android:background="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAbajo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonDerecha"
-        android:layout_width="92dp"
-        android:layout_height="93dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="42dp"
-        android:background="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonAbajo" />
-
-    <Button
-        android:id="@+id/buttonIzquierda"
-        android:layout_width="92dp"
-        android:layout_height="93dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="42dp"
-        android:background="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonAbajo"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/TextGamePAD"
         android:layout_width="140dp"
@@ -64,4 +21,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arriba"
+        android:layout_width="92dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginStart="135dp"
+        app:layout_constraintBottom_toTopOf="@+id/abajo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/keyboardbuttonred" />
+
+    <ImageView
+        android:id="@+id/derecha"
+        android:layout_width="92dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arriba"
+        app:srcCompat="@drawable/keyboardbuttonred" />
+
+    <ImageView
+        android:id="@+id/izquierda"
+        android:layout_width="92dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/arriba"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/keyboardbuttonred" />
+
+    <ImageView
+        android:id="@+id/abajo"
+        android:layout_width="92dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginStart="135dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/keyboardbuttonred" />
+
 </android.support.constraint.ConstraintLayout>

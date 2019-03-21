@@ -7,35 +7,41 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class GamePAD extends AppCompatActivity {
 
-    Button barriba,babajo,bderecha,bizquierda;
     TextView text;
+    ImageView tarriba,tabajo,tderecha,tizquierda;
+    Button boton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_pad);
         text=findViewById(R.id.TextGamePAD);
-        barriba= findViewById(R.id.buttonArriba);
-        babajo= findViewById(R.id.buttonAbajo);
-        bderecha= findViewById(R.id.buttonDerecha);
-        bizquierda= findViewById(R.id.buttonIzquierda);
+        tarriba=findViewById(R.id.arriba);
+        tabajo=findViewById(R.id.abajo);
+        tizquierda=findViewById(R.id.izquierda);
+        tderecha=findViewById(R.id.derecha);
         text.setText("Null");
 
 
-        barriba.setOnTouchListener(new View.OnTouchListener() {
-        @Override
+
+
+        tarriba.setOnTouchListener(new View.OnTouchListener() {
+            @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    barriba.setBackgroundColor(getResources().getColor(R.color.blue));
+                    tarriba.setImageResource(R.drawable.keyboardbuttonnegative);
                     text.setText("Arriba");
 
                 }
                 if(event.getAction() == MotionEvent.ACTION_UP){
-                    barriba.setBackgroundColor(getResources().getColor(R.color.red));
+                    tarriba.setImageResource(R.drawable.keyboardbuttonred);
                     text.setText("Null");
 
                 }
@@ -44,16 +50,16 @@ public class GamePAD extends AppCompatActivity {
 
         });
 
-    
-     babajo.setOnTouchListener(new View.OnTouchListener() {  
-        @Override
+        tabajo.setOnTouchListener(new View.OnTouchListener() {
+            @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    babajo.setBackgroundColor(getResources().getColor(R.color.blue));
+                    tabajo.setImageResource(R.drawable.keyboardbuttonnegative);
                     text.setText("Abajo");
+
                 }
                 if(event.getAction() == MotionEvent.ACTION_UP){
-                    babajo.setBackgroundColor(getResources().getColor(R.color.red));
+                    tabajo.setImageResource(R.drawable.keyboardbuttonred);
                     text.setText("Null");
 
                 }
@@ -62,34 +68,16 @@ public class GamePAD extends AppCompatActivity {
 
         });
 
-
- bderecha.setOnTouchListener(new View.OnTouchListener() {  
-        @Override
+        tizquierda.setOnTouchListener(new View.OnTouchListener() {
+            @Override
             public boolean onTouch(View v, MotionEvent event) {
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    bderecha.setBackgroundColor(getResources().getColor(R.color.blue));
-                    text.setText("Derecha");
-                }
-                if(event.getAction() == MotionEvent.ACTION_UP){
-                    bderecha.setBackgroundColor(getResources().getColor(R.color.red));
-                    text.setText("Null");
-
-                }
-                return true;
-            }
-
-        });
-
-
- bizquierda.setOnTouchListener(new View.OnTouchListener() {  
-        @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    bizquierda.setBackgroundColor(getResources().getColor(R.color.blue));
+                    tizquierda.setImageResource(R.drawable.keyboardbuttonnegative);
                     text.setText("Izquierda");
+
                 }
                 if(event.getAction() == MotionEvent.ACTION_UP){
-                    bizquierda.setBackgroundColor(getResources().getColor(R.color.red));
+                    tizquierda.setImageResource(R.drawable.keyboardbuttonred);
                     text.setText("Null");
 
                 }
@@ -97,6 +85,25 @@ public class GamePAD extends AppCompatActivity {
             }
 
         });
+
+        tderecha.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    tderecha.setImageResource(R.drawable.keyboardbuttonnegative);
+                    text.setText("Derecha");
+
+                }
+                if(event.getAction() == MotionEvent.ACTION_UP){
+                    tderecha.setImageResource(R.drawable.keyboardbuttonred);
+                    text.setText("Null");
+
+                }
+                return true;
+            }
+
+        });
+
 }
 
 
